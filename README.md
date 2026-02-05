@@ -23,57 +23,40 @@ Key observations:
 The following step focuses on data validation, ensuring that the data aligns with expected variation and distribution.  
 Key statistical formulas and checks:
 
-- **Sample Ratio Mismatch (\(\mathcal{SRM}\))**
+- **Sample Ratio Mismatch (SRM)**  
+$$
+\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
+$$
 
-\[
-\chi^2 = \sum\_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
-\]
+- **Standardized Mean Difference (SMD)**  
+$$
+\text{SMD} = \frac{\bar{x}_1 - \bar{x}_2}{s_p}
+$$
 
-where \(O_i\) = observed count, \(E_i\) = expected count, \(k\) = number of groups.  
- If the chi‑square test p‑value < \(\alpha\), \(\mathcal{SRM}\) is detected.
-
-- **Standardized Mean Difference (\(\mathcal{SMD}\))**
-
-\[
-\mathcal{SMD} = \frac{\bar{x}\_1 - \bar{x}\_2}{s_p}
-\]
-
-with
-
-\[
+$$
 s_p = \sqrt{\frac{s_1^2 + s_2^2}{2}}
-\]
+$$
 
-Values of \(|\mathcal{SMD}|\) > 0.1 are often considered imbalanced.
+- **Temporal Stability Check (Coefficient of Variation)**  
+$$
+CV = \frac{\sigma}{\mu}
+$$
 
-- **Temporal Stability Check (\(\mathcal{CV}\))**
-
-\[
-\mathcal{CV} = \frac{\sigma}{\mu}
-\]
-
-where \(\sigma\) = standard deviation, \(\mu\) = mean.  
- If \(\mathcal{CV} > 0.2\) → considered **unstable allocation**.
-
-- **Bonferroni Correction (\(\mathcal{B}\))**
-
-\[
+- **Bonferroni Correction**  
+$$
 p^{\text{corr}} = \min(p \cdot m, 1)
-\]
+$$
 
-where \(m\) = number of tests.
+- **Holm–Bonferroni Correction**  
+Order p‑values \(p_{(1)} \leq p_{(2)} \leq \dots \leq p_{(m)}\).  
+Compare each \(p_{(i)}\) with:
+$$
+\frac{\alpha}{m - i + 1}
+$$
 
-- **Holm–Bonferroni Correction (\(\mathcal{HB}\))**  
-  Order p‑values \(p*{(1)} \leq p*{(2)} \leq \dots \leq p*{(m)}\).  
-  Compare each \(p*{(i)}\) with \(\frac{\alpha}{m - i + 1}\).  
-  Reject \(\mathcal{H}\_0\) sequentially until a test fails.
-
-- **Benjamini–Hochberg False Discovery Rate (\(\mathcal{FDR}\))**  
-  Ordered p‑values: \(p*{(1)} \leq p*{(2)} \leq \dots \leq p\_{(m)}\).  
-  Corrected p‑value:
-
-\[
+- **Benjamini–Hochberg False Discovery Rate (FDR)**  
+Corrected p‑value:
+$$
 p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
-\]
+$$
 
-Significance determined by comparing with the \(\mathcal{FDR}\) threshold.
