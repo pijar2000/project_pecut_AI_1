@@ -23,21 +23,19 @@ Key observations:
 The following step focuses on data validation, ensuring that the data aligns with expected variation and distribution.  
 Key statistical formulas and checks:
 
-- **Sample Ratio Mismatch (SRM)**  
-  Used to check whether the allocation of samples matches the expected proportions.
+- **Sample Ratio Mismatch (\(\mathcal{SRM}\))**
 
 \[
 \chi^2 = \sum\_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
 \]
 
 where \(O_i\) = observed count, \(E_i\) = expected count, \(k\) = number of groups.  
- If the chi‑square test p‑value < α, SRM is detected.
+ If the chi‑square test p‑value < \(\alpha\), \(\mathcal{SRM}\) is detected.
 
-- **Standardized Mean Difference (SMD)**  
-  Measures the difference in means between groups relative to variation.
+- **Standardized Mean Difference (\(\mathcal{SMD}\))**
 
 \[
-SMD = \frac{\bar{x}\_1 - \bar{x}\_2}{s_p}
+\mathcal{SMD} = \frac{\bar{x}\_1 - \bar{x}\_2}{s_p}
 \]
 
 with
@@ -46,39 +44,36 @@ with
 s_p = \sqrt{\frac{s_1^2 + s_2^2}{2}}
 \]
 
-Values of |SMD| > 0.1 are often considered imbalanced.
+Values of \(|\mathcal{SMD}|\) > 0.1 are often considered imbalanced.
 
-- **Temporal Stability Check (Coefficient of Variation)**  
-  Evaluates stability of data distribution over time.
+- **Temporal Stability Check (\(\mathcal{CV}\))**
 
 \[
-CV = \frac{\sigma}{\mu}
+\mathcal{CV} = \frac{\sigma}{\mu}
 \]
 
 where \(\sigma\) = standard deviation, \(\mu\) = mean.  
- If CV > 0.2 → considered **unstable allocation**.
+ If \(\mathcal{CV} > 0.2\) → considered **unstable allocation**.
 
-- **Bonferroni Correction**  
-  Adjusts p‑values for multiple hypothesis testing.
+- **Bonferroni Correction (\(\mathcal{B}\))**
 
 \[
-p^\text{corr} = \min(p \cdot m, 1)
+p^{\text{corr}} = \min(p \cdot m, 1)
 \]
 
 where \(m\) = number of tests.
 
-- **Holm–Bonferroni Correction**  
-  Step‑down method: order p‑values \(p*{(1)} \leq p*{(2)} \leq \dots \leq p*{(m)}\).  
+- **Holm–Bonferroni Correction (\(\mathcal{HB}\))**  
+  Order p‑values \(p*{(1)} \leq p*{(2)} \leq \dots \leq p*{(m)}\).  
   Compare each \(p*{(i)}\) with \(\frac{\alpha}{m - i + 1}\).  
-  Reject H₀ sequentially until a test fails.
+  Reject \(\mathcal{H}\_0\) sequentially until a test fails.
 
-- **Benjamini–Hochberg False Discovery Rate (FDR)**  
-  Controls the expected proportion of false discoveries.  
+- **Benjamini–Hochberg False Discovery Rate (\(\mathcal{FDR}\))**  
   Ordered p‑values: \(p*{(1)} \leq p*{(2)} \leq \dots \leq p\_{(m)}\).  
   Corrected p‑value:
 
 \[
-p^\text{corr}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
+p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
 \]
 
-Significance determined by comparing with FDR threshold.
+Significance determined by comparing with the \(\mathcal{FDR}\) threshold.
