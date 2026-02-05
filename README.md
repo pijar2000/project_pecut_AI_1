@@ -24,39 +24,34 @@ The following step focuses on data validation, ensuring that the data aligns wit
 Key statistical formulas and checks:
 
 - **Sample Ratio Mismatch (SRM)**  
-$$
-\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
-$$
+
+$$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}$$
+
+Where $O_i = \text{observed count}$ and $E_i = \text{expected count}$ for group $i$.
 
 - **Standardized Mean Difference (SMD)**  
-$$
-\text{SMD} = \frac{\bar{x}_1 - \bar{x}_2}{s_p}
-$$
 
-$$
-s_p = \sqrt{\frac{s_1^2 + s_2^2}{2}}
-$$
+$$\text{SMD} = \frac{|\bar{X}_{\text{treatment}} - \bar{X}_{\text{control}}|}{\sqrt{\frac{s_{\text{treatment}}^2 + s_{\text{control}}^2}{2}}}$$
 
 - **Temporal Stability Check (Coefficient of Variation)**  
-$$
-CV = \frac{\sigma}{\mu}
-$$
+
+$$CV = \frac{\text{std(daily counts)}}{\text{mean(daily counts)}}$$
+
+If $CV > 0.2$: Unstable allocation $\rightarrow$ investigate system.
 
 - **Bonferroni Correction**  
-$$
-p^{\text{corr}} = \min(p \cdot m, 1)
-$$
+
+$$p^{\text{corr}} = \min(p \cdot m, 1)$$
 
 - **Holm–Bonferroni Correction**  
-Order p‑values \(p_{(1)} \leq p_{(2)} \leq \dots \leq p_{(m)}\).  
-Compare each \(p_{(i)}\) with:
-$$
-\frac{\alpha}{m - i + 1}
-$$
+
+Order p-values $p_{(1)} \leq p_{(2)} \leq \dots \leq p_{(m)}$.  
+Compare each $p_{(i)}$ with:
+
+$$\frac{\alpha}{m - i + 1}$$
 
 - **Benjamini–Hochberg False Discovery Rate (FDR)**  
-Corrected p‑value:
-$$
-p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
-$$
 
+Corrected p-value:
+
+$$p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)$$
