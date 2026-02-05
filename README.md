@@ -1,5 +1,9 @@
 # Project Analysis With Master Hilmi
 
+![Phase](https://img.shields.io/badge/current-validation-green)
+![Victims](https://img.shields.io/badge/victims-Sonnet_4.5_+_Gemini_2.5_🤖🤖-blue)
+![Performance](https://img.shields.io/badge/pecut_AI_interval-every_2_mins-success)
+
 ### Business Understanding
 
 At this stage, the main focus is to understand the business problem being addressed.
