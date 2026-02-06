@@ -1,7 +1,7 @@
 # Project Analysis With Master Hilmi
 
 ![Phase](https://img.shields.io/badge/current-validation-green)
-![Victims](https://img.shields.io/badge/victims-GPT+Sonnet_4.5_+_Gemini_2.5_🤖🤖-blue)
+![Victims](https://img.shields.io/badge/victims-GPT_+_Sonnet_4.5_+_Gemini_2.5_🤖🤖-blue)
 ![Performance](https://img.shields.io/badge/pecut_AI_interval-every_2_mins-success)
 
 ### 1.Business Understanding
