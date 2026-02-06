@@ -3,6 +3,13 @@
 ![Phase](https://img.shields.io/badge/current-validation-green)
 ![Victims](https://img.shields.io/badge/victims-GPT_+_Sonnet_4.5_+_Gemini_2.5_🤖🤖-blue)
 ![Performance](https://img.shields.io/badge/pecut_AI_interval-every_2_mins-success)
+![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b07c4002-2581-4db8-af17-a6f8a6ee8e45" width="200" alt="Melvin the Cat">
+  <p><i>"Me trying to differentiate between SRM and SMD"</i></p>
+</div>
+
 
 ### 1.Business Understanding
 
