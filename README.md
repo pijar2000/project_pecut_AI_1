@@ -23,40 +23,43 @@ Key observations:
 The following step focuses on data validation, ensuring that the data aligns with expected variation and distribution.  
 Key statistical formulas and checks:
 
-- **Sample Ratio Mismatch (SRM)**  
-$$
-\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
-$$
+- **Sample Ratio Mismatch (SRM)**
 
-- **Standardized Mean Difference (SMD)**  
-$$
-\text{SMD} = \frac{\bar{x}_1 - \bar{x}_2}{s_p}
-$$
+  $$
+  \chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}
+  $$
+
+- **Standardized Mean Difference (SMD)**
+  $$
+  \text{SMD} = \frac{\bar{x}_1 - \bar{x}_2}{s_p}
+  $$
 
 $$
 s_p = \sqrt{\frac{s_1^2 + s_2^2}{2}}
 $$
 
-- **Temporal Stability Check (Coefficient of Variation)**  
-$$
-CV = \frac{\sigma}{\mu}
-$$
+- **Temporal Stability Check (Coefficient of Variation)**
 
-- **Bonferroni Correction**  
-$$
-p^{\text{corr}} = \min(p \cdot m, 1)
-$$
+  $$
+  CV = \frac{\sigma}{\mu}
+  $$
+
+- **Bonferroni Correction**
+
+  $$
+  p^{\text{corr}} = \min(p \cdot m, 1)
+  $$
 
 - **Holm–Bonferroni Correction**  
-Order p‑values \(p_{(1)} \leq p_{(2)} \leq \dots \leq p_{(m)}\).  
-Compare each \(p_{(i)}\) with:
-$$
-\frac{\alpha}{m - i + 1}
-$$
+  Order p‑values \(p*{(1)} \leq p*{(2)} \leq \dots \leq p*{(m)}\).  
+  Compare each \(p*{(i)}\) with:
+
+  $$
+  \frac{\alpha}{m - i + 1}
+  $$
 
 - **Benjamini–Hochberg False Discovery Rate (FDR)**  
-Corrected p‑value:
-$$
-p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
-$$
-
+  Corrected p‑value:
+  $$
+  p^{\text{corr}}_{(i)} = \min\left(\frac{m}{i} \cdot p_{(i)}, 1\right)
+  $$
