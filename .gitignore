@@ -1,0 +1,18 @@
+# --- 1. Python Bytecode (WAJIB) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 2. Jupyter Notebook Checkpoints ---
+# Ini sering muncul otomatis kalau kamu save ipynb
+.ipynb_checkpoints/
+
+# --- 3. Virtual Environment (Biar library gak ke-upload) ---
+venv/
+env/
+.env
+.venv/
+
+# --- 4. IDE Settings (VS Code / PyCharm) ---
+.vscode/
+.idea/
